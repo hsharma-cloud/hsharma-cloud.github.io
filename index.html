@@ -1,7 +1,6 @@
 ```html
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,88 +9,191 @@
 
 <style>
 
-body {
+html {
+    scroll-behavior: smooth;
+}
+
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #0f172a;
-    color: #f8fafc;
-    line-height: 1.6;
+    background: #f8fafc;
+    color: #1e293b;
+    line-height: 1.7;
 }
 
-header {
+/* Navigation */
+
+nav {
+    position: sticky;
+    top: 0;
+    background: white;
+    border-bottom: 1px solid #e2e8f0;
+    z-index: 1000;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #475569;
+    margin-left: 20px;
+    font-weight: 500;
+}
+
+.nav-links a:hover {
+    color: #2563eb;
+}
+
+/* Hero */
+
+.hero {
     text-align: center;
-    padding: 80px 20px;
-    background: linear-gradient(135deg,#0f172a,#1e293b);
+    padding: 100px 20px;
+    background: linear-gradient(to bottom, #ffffff, #f1f5f9);
 }
 
-header h1 {
-    font-size: 3rem;
-    margin-bottom: 10px;
+.hero h1 {
+    font-size: 4rem;
+    color: #0f172a;
 }
 
-header h2 {
-    color: #38bdf8;
+.hero h2 {
+    margin-top: 10px;
+    color: #2563eb;
     font-weight: normal;
 }
 
-.tagline {
-    margin-top: 20px;
+.hero p {
+    max-width: 850px;
+    margin: 25px auto;
+    color: #475569;
     font-size: 1.1rem;
 }
 
-.button {
+.buttons {
+    margin-top: 30px;
+}
+
+.btn {
     display: inline-block;
-    margin: 10px;
     padding: 12px 24px;
-    background-color: #38bdf8;
-    color: #0f172a;
+    margin: 5px;
     text-decoration: none;
     border-radius: 8px;
     font-weight: bold;
 }
 
-.button:hover {
-    opacity: 0.9;
+.btn-primary {
+    background: #2563eb;
+    color: white;
 }
+
+.btn-secondary {
+    background: white;
+    border: 1px solid #cbd5e1;
+    color: #1e293b;
+}
+
+/* General */
 
 .container {
-    max-width: 1100px;
+    max-width: 1200px;
     margin: auto;
-    padding: 40px 20px;
+    padding: 70px 20px;
 }
 
-section {
-    margin-bottom: 60px;
-}
-
-h3 {
-    color: #38bdf8;
-    border-bottom: 2px solid #1e293b;
-    padding-bottom: 10px;
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 25px;
+    color: #0f172a;
 }
 
 .card {
-    background-color: #1e293b;
-    padding: 20px;
-    border-radius: 10px;
-    margin-top: 20px;
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 25px;
 }
 
-.project-grid {
+/* Expertise */
+
+.expertise-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
     gap: 20px;
 }
 
-footer {
-    text-align: center;
-    padding: 30px;
-    border-top: 1px solid #334155;
-    color: #94a3b8;
+/* Projects */
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    gap: 20px;
 }
 
-a {
-    color: #38bdf8;
+.project-card {
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 25px;
+}
+
+.project-card h3 {
+    margin-bottom: 10px;
+}
+
+/* Portfolio */
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    gap: 20px;
+}
+
+/* Certifications */
+
+.cert-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    gap: 20px;
+}
+
+/* Footer */
+
+footer {
+    text-align: center;
+    padding: 40px;
+    border-top: 1px solid #e2e8f0;
+    color: #64748b;
+}
+
+@media (max-width: 768px) {
+
+.hero h1 {
+    font-size: 2.5rem;
+}
+
+.nav-links {
+    display: none;
+}
+
 }
 
 </style>
@@ -99,57 +201,104 @@ a {
 
 <body>
 
-<header>
+<nav>
+<div class="nav-container">
+
+<div class="logo">Hari Sharma</div>
+
+<div class="nav-links">
+<a href="#home">Home</a>
+<a href="#expertise">Expertise</a>
+<a href="#projects">Projects</a>
+<a href="#portfolio">Portfolio</a>
+<a href="#certifications">Certifications</a>
+<a href="#resume">Resume</a>
+<a href="#contact">Contact</a>
+</div>
+
+</div>
+</nav>
+
+<section class="hero" id="home">
 
 <h1>Hari Sharma</h1>
 
 <h2>Cloud Security Engineer</h2>
 
-<p class="tagline">
-AWS • Azure • IAM • Security Architecture • Network Security • Automation
+<p>
+Designing secure cloud platforms through security architecture, identity and access management, network security, governance, monitoring, and automation.
 </p>
 
-<a class="button" href="#">Resume</a>
+<div class="buttons">
 
-<a class="button" href="#projects">Projects</a>
+<a href="#resume" class="btn btn-primary">Resume</a>
 
-<a class="button" href="https://github.com/hsharma-cloud" target="_blank">GitHub</a>
+<a href="#projects" class="btn btn-secondary">Projects</a>
 
-</header>
+<a href="https://github.com/hsharma-cloud" class="btn btn-secondary" target="_blank">GitHub</a>
+
+</div>
+
+</section>
 
 <div class="container">
 
 <section>
 
-<h3>About Me</h3>
+<h2 class="section-title">Professional Summary</h2>
 
 <div class="card">
 
 <p>
-Security Engineer focused on cloud security, identity and access management, network security, and enterprise security architecture across AWS and Microsoft Azure.
+Security Engineer with experience across cloud security, networking, identity management, infrastructure, and enterprise security architecture.
 </p>
 
+<br>
+
 <p>
-Passionate about designing secure, scalable, and resilient cloud environments while applying security-first principles, governance, automation, and operational excellence.
+Focused on building secure, scalable, and resilient environments across AWS and Azure while applying security-first design principles, governance, monitoring, automation, and operational excellence.
 </p>
 
 </div>
 
 </section>
 
-<section>
+<section id="expertise">
 
-<h3>Certifications</h3>
+<h2 class="section-title">Technical Expertise</h2>
+
+<div class="expertise-grid">
 
 <div class="card">
+<h3>Cloud Platforms</h3>
+AWS<br>
+Microsoft Azure
+</div>
 
-<p>
-Certification portfolio currently being updated.
-</p>
+<div class="card">
+<h3>Security</h3>
+IAM<br>
+Security Architecture<br>
+Monitoring & Logging<br>
+Governance & Compliance
+</div>
 
-<p>
-AWS, cloud, networking, and security certifications will be showcased here.
-</p>
+<div class="card">
+<h3>Infrastructure</h3>
+Linux<br>
+Windows Server<br>
+Active Directory<br>
+Virtualization
+</div>
+
+<div class="card">
+<h3>Networking</h3>
+TCP/IP<br>
+DNS<br>
+VPN<br>
+Firewalls<br>
+Hybrid Connectivity
+</div>
 
 </div>
 
@@ -157,62 +306,111 @@ AWS, cloud, networking, and security certifications will be showcased here.
 
 <section id="projects">
 
-<h3>Featured Projects</h3>
+<h2 class="section-title">Featured Projects</h2>
 
 <div class="project-grid">
 
-<div class="card">
-<h4>AWS Security Monitoring Platform</h4>
-<p>
-Cloud-native security monitoring architecture leveraging AWS security services and centralized logging.
-</p>
+<div class="project-card">
+<h3>AWS Security Monitoring Platform</h3>
+<p>Centralized monitoring, logging, alerting, and security visibility using AWS-native services.</p>
 </div>
 
-<div class="card">
-<h4>AWS Transit Gateway Hub-and-Spoke Architecture</h4>
-<p>
-Enterprise networking architecture featuring centralized connectivity, segmentation, bastion access, and private workloads.
-</p>
+<div class="project-card">
+<h3>AWS Transit Gateway Hub-and-Spoke Architecture</h3>
+<p>Enterprise networking architecture featuring centralized connectivity and segmented workloads.</p>
 </div>
 
-<div class="card">
-<h4>Azure Enterprise Security Platform for Northstar Financial Group</h4>
-<p>
-Enterprise Azure security architecture focused on governance, identity, monitoring, threat protection, and secure application delivery.
-</p>
+<div class="project-card">
+<h3>Azure Enterprise Security Platform</h3>
+<p>Enterprise Azure security architecture focused on identity, governance, monitoring, and threat protection.</p>
 </div>
 
-<div class="card">
-<h4>AWS Enterprise Security Platform for Northstar Financial Group</h4>
-<p>
-Enterprise AWS security architecture focused on IAM, logging, monitoring, compliance, and network security.
-</p>
+<div class="project-card">
+<h3>AWS Enterprise Security Platform</h3>
+<p>Enterprise AWS security architecture focused on IAM, logging, monitoring, compliance, and network security.</p>
 </div>
 
 </div>
 
 </section>
 
-<section>
+<section id="portfolio">
 
-<h3>Contact</h3>
+<h2 class="section-title">Security Architecture Portfolio</h2>
+
+<div class="portfolio-grid">
+
+<div class="card">
+Architecture Diagram Placeholder
+</div>
+
+<div class="card">
+Project Screenshot Placeholder
+</div>
+
+<div class="card">
+Design Documentation Placeholder
+</div>
+
+<div class="card">
+Case Study Placeholder
+</div>
+
+</div>
+
+</section>
+
+<section id="certifications">
+
+<h2 class="section-title">Certifications</h2>
+
+<div class="cert-grid">
+
+<div class="card">
+Certification Badge Placeholder
+</div>
+
+<div class="card">
+Verification Link Placeholder
+</div>
+
+<div class="card">
+Certificate PDF Placeholder
+</div>
+
+</div>
+
+</section>
+
+<section id="resume">
+
+<h2 class="section-title">Resume</h2>
 
 <div class="card">
 
 <p>
-GitHub:
-<a href="https://github.com/hsharma-cloud" target="_blank">
-github.com/hsharma-cloud
-</a>
+Professional resume available for download.
 </p>
 
-<p>
-LinkedIn: Coming Soon
-</p>
+<br>
 
-<p>
-Email: Coming Soon
-</p>
+<a href="#">Resume Download Placeholder</a>
+
+</div>
+
+</section>
+
+<section id="contact">
+
+<h2 class="section-title">Contact</h2>
+
+<div class="card">
+
+<p><strong>GitHub:</strong> github.com/hsharma-cloud</p>
+
+<p><strong>LinkedIn:</strong> Placeholder</p>
+
+<p><strong>Email:</strong> Placeholder</p>
 
 </div>
 
