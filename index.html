@@ -1,134 +1,39 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Hari Sharma | Cloud Security Engineer</title>
-
 <style>
-body{
-    font-family:Arial,Helvetica,sans-serif;
-    margin:0;
-    background:#f8fafc;
-    color:#1e293b;
-}
-
-.container{
-    width:90%;
-    max-width:1200px;
-    margin:auto;
-}
-
-.hero{
-    text-align:center;
-    padding:80px 20px;
-    background:#ffffff;
-}
-
-.hero h1{
-    font-size:3rem;
-    margin-bottom:10px;
-}
-
-.hero h2{
-    color:#2563eb;
-    font-weight:normal;
-}
-
-.buttons{
-    margin-top:30px;
-}
-
-.btn{
-    display:inline-block;
-    padding:12px 24px;
-    margin:5px;
-    border-radius:8px;
-    text-decoration:none;
-    font-weight:bold;
-    border:1px solid #cbd5e1;
-    color:#1e293b;
-    background:white;
-}
-
-.section{
-    padding:60px 20px;
-}
-
-.section h2{
-    text-align:center;
-    margin-bottom:30px;
-}
-
-.grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:20px;
-}
-
-.card{
-    background:white;
-    border:1px solid #e2e8f0;
-    border-radius:10px;
-    padding:20px;
-}
-
-.card h3{
-    margin-top:0;
-}
-
-.card a{
-    color:#2563eb;
-}
-
-.cert-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
-    gap:20px;
-}
-
-.cert-grid img{
-    width:100%;
-    height:150px;
-    object-fit:contain;
-    background:white;
-    border:1px solid #e2e8f0;
-    border-radius:10px;
-    padding:10px;
-}
-
-footer{
-    text-align:center;
-    padding:30px;
-    border-top:1px solid #e2e8f0;
-}
+body{font-family:Arial,sans-serif;margin:0;background:#f8fafc;color:#1e293b}
+header{text-align:center;padding:60px 20px;background:#fff}
+h1{margin-bottom:10px}
+h2{color:#2563eb;font-weight:400}
+.buttons a{display:inline-block;margin:8px;padding:12px 20px;border:1px solid #cbd5e1;border-radius:8px;text-decoration:none;color:#1e293b}
+.container{max-width:1200px;margin:auto;padding:40px 20px}
+.section-title{text-align:center;margin-bottom:30px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
+.card{background:#fff;border:1px solid #e2e8f0;border-radius:10px;padding:20px}
+.card a{color:#2563eb}
+footer{text-align:center;padding:30px;border-top:1px solid #e2e8f0}
 </style>
 </head>
-
 <body>
 
-<section class="hero">
-
+<header>
 <h1>Hari Sharma</h1>
-
 <h2>Cloud Security Engineer (Azure & AWS)</h2>
 
 <div class="buttons">
-
-<a class="btn" href="resume/resume.pdf" target="_blank">Resume</a>
-
-<a class="btn" href="https://github.com/hsharma-cloud" target="_blank">GitHub</a>
-
-<a class="btn" href="https://linkedin.com/in/sharmahari25/" target="_blank">LinkedIn</a>
-
+<a href="resume/resume.pdf" target="_blank">Resume</a>
+<a href="https://github.com/hsharma-cloud" target="_blank">GitHub</a>
+<a href="https://linkedin.com/in/sharmahari25/" target="_blank">LinkedIn</a>
 </div>
+</header>
 
-</section>
+<div class="container">
 
-<section class="section container">
-
-<h2>Featured Projects</h2>
+<h2 class="section-title">Featured Projects</h2>
 
 <div class="grid">
 
@@ -140,7 +45,7 @@ footer{
 
 <div class="card">
 <h3>Terraform Multi-Cloud Security Monitoring</h3>
-<p>Multi-cloud security monitoring using AWS, Azure, and Terraform.</p>
+<p>Multi-cloud monitoring using AWS, Azure, and Terraform.</p>
 <a href="https://github.com/hsharma-cloud/terraform-multicloud-security-monitoring" target="_blank">View Project</a>
 </div>
 
@@ -152,58 +57,33 @@ footer{
 
 <div class="card">
 <h3>AWS Multi-Tier Hub-and-Spoke Architecture</h3>
-<p>Enterprise networking architecture using AWS Transit Gateway.</p>
+<p>Enterprise networking architecture using Transit Gateway.</p>
 <a href="https://github.com/hsharma-cloud/aws-multi-tier-hub-spoke-architecture" target="_blank">View Project</a>
 </div>
 
 </div>
 
-</section>
+<h2 class="section-title" style="margin-top:60px;">Certifications</h2>
 
-<section class="section container">
+<p style="text-align:center;">
+Add your badge images from the badges folder here.
+</p>
 
-<h2>Certifications</h2>
+<h2 class="section-title" style="margin-top:60px;">Certification Documents</h2>
 
-<div class="cert-grid">
+<p style="text-align:center;">
+Add your certificate PDFs/images here.
+</p>
 
-<img src="badges/AWS Solutions Architect Associate.png" alt="AWS SAA">
-<img src="badges/CEH_2E345519D3F7.png" alt="CEH">
-<img src="badges/CompTIA Security X.png" alt="SecurityX">
-<img src="badges/CISCO Certified Specialist-Security.png" alt="Cisco Security">
-<img src="badges/CompTIA PentTest+.png" alt="Pentest+">
-<img src="badges/Certified in Cybersecurity.png" alt="CC">
-<img src="badges/CyberThreatManagement.png" alt="Cyber Threat Management">
-<img src="badges/CCNP_Enterprise_large.gif" alt="CCNP">
-<img src="badges/ccna_large.jpg" alt="CCNA">
-
-</div>
-
-</section>
-
-<section class="section container">
-
-<h2>Contact</h2>
+<h2 class="section-title" style="margin-top:60px;">Contact</h2>
 
 <div class="card">
-
-<p>
-<strong>Email:</strong>
-<a href="mailto:sharma.hari1@proton.me">sharma.hari1@proton.me</a>
-</p>
-
-<p>
-<strong>GitHub:</strong>
-<a href="https://github.com/hsharma-cloud" target="_blank">github.com/hsharma-cloud</a>
-</p>
-
-<p>
-<strong>LinkedIn:</strong>
-<a href="https://linkedin.com/in/sharmahari25/" target="_blank">linkedin.com/in/sharmahari25</a>
-</p>
-
+<p><strong>Email:</strong> <a href="mailto:sharma.hari1@proton.me">sharma.hari1@proton.me</a></p>
+<p><strong>GitHub:</strong> <a href="https://github.com/hsharma-cloud" target="_blank">github.com/hsharma-cloud</a></p>
+<p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/sharmahari25/" target="_blank">linkedin.com/in/sharmahari25</a></p>
 </div>
 
-</section>
+</div>
 
 <footer>
 © 2026 Hari Sharma | Cloud Security Engineer
@@ -211,7 +91,3 @@ footer{
 
 </body>
 </html>
-```
-
-
-
